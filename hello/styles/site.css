@@ -33,20 +33,30 @@ main {
 }
 
 #favplace img {
-    /* height:370px; */
     max-width: 60%;
     margin-left:4.5em;
 }
 
 /* Styling the Form */
 
-#formlist {
-    padding-left: 0;
-}
-
-#formlist li {
+form ul li {
     list-style: none;
     margin-top: 2em;
+}
+
+#formcontainer {
+    text-align: center;
+}
+
+#formlist {
+    margin-right: 4em;
+    display: inline-block;
+    text-align: right;
+} 
+
+#formlist label {
+    padding-right: 1em;
+    font-weight: 700;
 }
 
 @media (min-width: 800px) {
