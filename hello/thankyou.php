@@ -1,7 +1,7 @@
 <html>
 <body>
 
-Thank you <?php echo $_POST["name"]; ?>
+Thank you!
 
 </body>
 </html>
