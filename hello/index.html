@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" >
 	  <link rel= "stylesheet" href= "styles/site.css"/>
+	  <script src="/scripts/form.js"></script>
   </head>
 
   <body>
@@ -33,7 +34,7 @@
     
       <article class="Column">
         <h2>Subscribe to our newsletter!</h2>
-        <form method="post" action="#"
+        <form id="subscribe" method="post" action="#"
           <ul id="formlist">
             <li>
               <label for="name">Name:</label>
@@ -47,7 +48,7 @@
               <label for="confirmation" class="FormLine">Please confirm you would like to be added to our mailing list:</label>
               <input type="checkbox" id="confirmation" name="Permission" value="I confirm"/>
             </li>
-            <li><button type="submit" id="formbutton" class="FormLine">Submit</button></li>
+            <li><button type="submit" class="FormLine">Submit</button></li>
           </ul>
         </form>
       </article>
