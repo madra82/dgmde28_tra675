@@ -40,7 +40,7 @@ main {
 
 /* Styling the Form */
 
-form ul li {
+#subscribe ul li {
     list-style: none;
     margin-top: 2em;
 }
