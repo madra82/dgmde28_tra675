@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" >
 	  <link rel= "stylesheet" href= "styles/site.css"/>
-	  <script src="scripts/form.js"></script>
+    <script src="/scripts/form.js"></script>
   </head>
 
   <body>
@@ -34,23 +34,29 @@
     
       <article class="Column">
         <h2>Subscribe to our newsletter!</h2>
-        <form id="subscribe" method="post" action="#">
-          <ul id="formlist">
-            <li>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="Name"/>
-            </li>
-            <li>
-              <label for="email" class="FormLine">Email:</label>
-              <input type="text" id="email" name="Email"/>
-            </li>
-            <li>
-              <label for="confirmation" class="FormLine">Please confirm you would like to be added to our mailing list:</label>
-              <input type="checkbox" id="confirmation" name="Permission" value="I confirm"/>
-            </li>
-            <li><button type="submit" class="FormLine">Submit</button></li>
-          </ul>
-        </form>
+        <div id="formcontainer">
+          <form id="subscribe" method="post" action="#">
+            <ul id="formlist">
+              <li>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="FirstName"/>
+              </li>
+              <li>
+                <label for="lname">LastName:</label>
+                <input type="text" id="lname" name="LastName"/>
+              </li>
+              <li>
+                <label for="email" class="FormLine">Email:</label>
+                <input type="email" id="email" name="Email"/>
+              </li>
+              <li>
+                <label for="confirmation" class="FormLine">Please confirm you would like to be added to our mailing list:</label>
+                <input type="checkbox" id="confirmation" name="Permission" value="yes"/>
+              </li>
+              <li><button type="submit" class="FormLine">Submit</button></li>
+            </ul>
+          </form>
+        </div>
       </article>
     
     </div>
