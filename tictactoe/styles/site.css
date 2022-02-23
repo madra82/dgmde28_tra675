@@ -1,0 +1,63 @@
+h1 {
+    font-family: Cabin Sketch, Calibri, sans-serif;
+    font-size: 400%;
+    color: rgb(192,0,0);
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+#gameContainer {
+    text-align: center;
+}
+
+body {
+    font-family: 'Unica One', Arial, sans-serif;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+#messageBox {
+    margin-top: 0;
+}
+
+.cells {
+    border: thick solid;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    margin: 0.3em;
+    padding-top: 1.2em;
+    vertical-align: middle;
+}
+
+.cells:hover {
+    background-color: lightgrey;
+}
+
+ #playBtn {
+    background-color: rgb(192,0,0);
+    font-family: 'Unica One', Arial, sans-serif; 
+    color: white;
+    font-size: 120%;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+ }
+ 
+ #messageBox {
+     font-weight:100;
+ }
+
+ .CatX {
+     background-color: rgb(192,0,0);
+     border-color: rgb(192,0,0);
+     color: white;
+ }
+
+ .CatO {
+     background-color: black;
+     border-color: black;
+     color: white;
+ }
