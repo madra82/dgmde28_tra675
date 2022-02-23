@@ -45,9 +45,6 @@ function makeMove() {
     player == "X" ? this.classList.add("CatX") : this.classList.add("CatO");
     this.innerHTML = player; moves += 1;
 
-    console.log(player);    
-    console.log(moves);
-
     moves < 4 ? changePlayer() : checkWin()
 
  }
@@ -80,8 +77,6 @@ function checkDraw() {
     }
 
     draw == false ? changePlayer() : messageBox.innerHTML = "Game Over with No Win"
-
-        console.log(draw);
 }
      
 function changePlayer () {
