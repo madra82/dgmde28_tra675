@@ -1,0 +1,167 @@
+/* Fonts and Margins */
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+    margin: 0;
+    padding-top: 0.5em;
+}
+
+img {
+    margin: 0;
+}
+
+h1, main, #subMenu {
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+}
+
+h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-top: 2em;
+}
+
+h3 {
+    font-size: 200%;
+    margin: 0;
+}
+
+body {
+    margin-top: 0;
+}
+
+#menuContainer {
+    position: relative;
+}
+
+
+#orderSummary {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    font-size: 200%;
+    padding: 0.5em;
+    z-index: 10;
+    background-color: white;
+    border: thin solid;
+    background-image: url("../images/close-button.svg");
+    background-size: 1em;
+    background-position: right 0.2em top 0.1em;
+    padding: 1em;
+    background-repeat: no-repeat;
+}
+
+#orderSummary li {
+    margin-left: 1em; 
+}
+
+#orderSummary.collapsed {
+    display:none;
+}
+
+/* Styling the Manu */
+
+#formList {
+    padding-left: 0;
+}
+
+#formList li {
+    list-style: none;
+    margin-top: 2em;
+    font-size: 200%;
+    font-weight: 100;
+    padding-top: 1em;
+}
+
+#formList label, #formList input, #formList p, .menuHeading {
+    float: left;
+    text-align: left;
+}
+
+#formList label {
+    width: 280px;
+    clear: left;
+}
+
+#itemHeading {
+    width: 265px;
+}
+
+#formList p {
+    width: 250px;
+    margin: 0;
+}
+
+#priceHeading {
+    width: 230px;
+}
+
+#quantityHeading {
+    width: 300px;
+}
+
+#formList input {
+    width: 40px;
+    height: 40px;
+}
+
+#subMenu {
+    display: block;
+    margin-left: 11em;
+    margin-top: 2em;
+    font-size: 200%;
+    background-color: black;
+    padding: 0.2em;
+    color: white;
+}
+
+/* Styling the Image */
+
+#imageContainer {
+    position: relative;
+}
+
+#watermark {
+    position: absolute;
+    height: 100%;
+    opacity: 15%;
+    z-index: -10;
+}
+
+
+@media (min-width: 1040px) {
+
+#formList label {
+    width: 365px;
+}
+
+#itemHeading {
+    width: 350px;
+}
+
+#priceHeading, #quantityHeading {
+    width: 290px;
+}
+
+#formList p {
+    width: 305px;
+}
+
+#totalHeading {
+    width: 950px;
+}
+
+#watermark {
+    width: 100%;
+    height: auto;
+}
+
+#subMenu {
+    margin-left: 8em;
+    display: inline-block;
+}
+
+}

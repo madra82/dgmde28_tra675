@@ -1,0 +1,177 @@
+/* Fonts and Margins */
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+    margin: 0;
+    padding-top: 0.5em;
+}
+
+img {
+    margin: 0;
+}
+
+h1, main, #playBtn, .gameBtn,.alertBoxBtn {
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+}
+
+body {
+    margin-top: 0;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    font-size: 100%;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.cardHolder,#walletHolder,#betHolder, #alertBox, .gameBtn, #playBtn {
+    font-size: 200%;
+}
+
+.alertBoxBtn {
+    font-size: 80%;
+}
+
+.cardHolder,#walletHolder,#betHolder {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Overall Layout */
+
+#gameContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+/* Buttons */
+
+.btnWrapper {
+  text-align: center;
+}
+
+#playBtn, .alertBoxBtn {
+    background-color: black;
+    color: white;
+    margin-top: 1em;
+}
+
+.gameBtn {
+    margin-top: 1em;
+    color: white;
+}
+
+.alertBoxBtn {
+    margin: 0.5em;
+}
+
+#stop {
+    background-color: rgb(192,0,0);
+}
+
+#go {
+    background-color: darkgreen;
+}
+
+/* Second Column */
+
+#rules {
+    margin-right: 2em;
+}
+
+.cardHolder {
+    width: 100px;
+    height: 160px;
+    border: thin solid; 
+    margin-left: 0.3em;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+    padding-top: 0.4em;
+    vertical-align: bottom;
+}
+
+.cardHolder img {
+    padding: 0.5em;
+}
+    
+/* Third Column */
+
+#betHolder, #walletHolder {
+    width: 130px;
+    height: 90px;
+    border: thin solid;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-top: 0.8em;
+    text-align: center;
+}
+
+/* Collapsed Class + AlertBox */
+
+#alertBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 50%;
+    margin-right: auto;
+    width: 300px;
+    font-size: 150%;
+    padding: 0.5em;
+    z-index: 10;
+    background-color: white;
+    border: thin solid;
+    padding: 1em;
+    background-repeat: no-repeat;
+}
+
+.collapsed {
+    display:none;
+}
+
+.hidden img {
+    display: none;
+}
+
+.hidden {
+    background-color: black;
+}
+
+/* Styling the Image */
+
+#imageContainer {
+    position: relative;
+}
+
+#watermark {
+    position: absolute;
+    height: 100%;
+    opacity: 15%;
+    z-index: -10;
+}
+
+
+@media (min-width: 1040px) {
+
+#watermark {
+    width: 100%;
+    height: auto;
+}
+
+}
