@@ -19,7 +19,7 @@ function Cell(r,c)
         cell.setAttribute("class","cells");
         cell.setAttribute("id",this.guessCount+""+this.position);
         cell.setAttribute("type","text");
-        cell.setAttribute("maxlength",1);
+        cell.setAttribute("maxlength",0);
 
         return cell;
     }
