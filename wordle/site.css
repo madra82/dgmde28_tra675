@@ -30,6 +30,7 @@ body {
     margin: 0.3em;
     padding-top: 1.2em;
     vertical-align: middle;
+    font-family: 'Architects Daughter','Calibri','sans-serif';
 }
 
 .cells:hover {
