@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+	<link rel= "stylesheet" href= "styles/site.css"/>
+    <script src="scripts/words.js"></script>
+</head>
+
+<body>
+    <header> 
+        <div id="debugBtnWrapper">
+            <button id = "debug">Debug</button>
+            <p id = "answerBox" class = "hide">Answer:&nbsp<span id = "answer"></span></p>
+        </div>
+        <div id = "debugMsg" class = "hide">
+          <p>  Please note that clicking this button will display the answer. Are you sure?</p>
+          <button id = "debugYes">Yes</button>
+          <button id = "debugNo">No</button>
+        </div>
+
+        <h1>Wordle</h1>
+    </header>
+    
+    <main>
+
+        <div id = "msgContainer"><div id = "msgBox" class="hide"><p id = "msgText"></p><button id = "close">OK</button></div></div>
+        <h3 id = "alphabetHeading">Show Alphabet?</h3>
+        <p id = "alphabet" class = "hide">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+        <div id = "gridContainer">
+            <h3 id = "rulesTitle">Show Rules?</h3>
+            <div id = "rules" class = "hide">
+                    <div id = "ruleContents">
+                    <h2>Rules</h2>
+                    <ul>
+                        <li>You have 6 attempts to guess a 5 letter word.</li>
+                        <li>Each attempt must be a real word.</li>
+                        <li>Color coding will differentiate between</li>
+                            <ul>
+                                <li>correctly placed letters, </li>
+                                <li>incorrectly placed letters; and </li>
+                                <li>letters which are not in the word.</li>
+                            </ul>
+                        <li id = "large" >An explanation of your guess together with a list of eliminated letters will appear to the right of the grid.</li>
+                        <li id="small">An explanation of your guess together with a list of eliminated letters will appear below the grid.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id = "gameContainer"></div>
+            <div id = "gridCol3">
+                <div id = "explainGuess" class = "hide">
+                    <h2>Your Guess</h2>
+                    <div id="explainText"></div>
+                </div>
+                <div id = "eliminated" class = "hide">
+                    <h2>Eliminated Letters</h2>
+                    <div id="elimLetterHolder"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id = "playAgainBtnWrapper"><button id = "playAgain">Play Again?</button></div>
+
+    </main>
+    <footer> <!-- page footer --> </footer>
+</body>
+
+</html>
