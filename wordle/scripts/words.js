@@ -20,6 +20,7 @@ function Cell(r,c)
         cell.setAttribute("id",this.guessCount+""+this.position);
         cell.setAttribute("type","text");
         cell.setAttribute("maxlength",0);
+	cell.setAttribute("tabindex",-1);
 
         return cell;
     }
