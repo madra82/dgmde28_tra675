@@ -129,6 +129,7 @@ body {
     text-transform: uppercase;
     font-family: 'Architects Daughter','Calibri','sans-serif';
     cursor: none;
+    caret-color: rgba(0,0,0,0);
 }
 
 .correct {
