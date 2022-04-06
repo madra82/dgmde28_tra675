@@ -473,7 +473,7 @@ function addListeners()
 
         boxes = document.querySelectorAll(".cells")
         boxes.forEach(function(box){
-            box.textContent="";
+            box.value ="";
             box.classList.remove("correct");
             box.classList.remove("partial");
             box.classList.remove("wrong");
