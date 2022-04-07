@@ -319,6 +319,15 @@ body {
     color: black;
 }
 
+.good {
+    color: black;
+    background-color: white
+}
+
+.maybe {
+    background-color: rgb(218,165,32);
+}
+
  @media (min-width: 600px) {
     #explainGuess, #eliminated {
         height: 200px;
