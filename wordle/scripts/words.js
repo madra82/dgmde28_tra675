@@ -188,6 +188,9 @@ function Row(n)
                 this.cells[i].correctPlace();
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the right place<br>"
+		
+		goodKey = document.getElementById(guess[i]);
+                goodKey.classList.add("good");
 
                 char[i] = "0";
                 guess[i] = "0";
@@ -197,14 +200,18 @@ function Row(n)
                 this.cells[i].notIncluded();
                 elimLetters.add(guess[i]);
 		    
-		key = document.getElementById(guess[i]);
-                key.classList.add("blackout");
+		badKey1 = document.getElementById(guess[i]);
+                badKey1.classList.add("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is not in the word<br>"
             }
             else if (guess[i] != 0 && guessCount > ansCount) 
             {
                 this.cells[i].notIncluded();
+		elimLetters.add(guess[i]);
+
+                badKey2 = document.getElementById(guess[i]);
+                badKey2.classList.add("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is not in the word<br>"
 
@@ -213,6 +220,9 @@ function Row(n)
             else if (guess[i] != 0)
             {
                 this.cells[i].inWord();
+		    
+		maybeKey = document.getElementById(guess[i]);
+                maybeKey.classList.add("maybe");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the wrong place<br>"
             }
