@@ -522,6 +522,10 @@ function addListeners()
 		{
 			event.preventDefault();
         	})
+		
+		cell.addEventListener("mousedown",function(event){
+            		event.preventDefault();
+        	})	
     	})
     document.addEventListener("keyup", trackKeys)
 }
