@@ -299,8 +299,7 @@ function Row(n)
             var closeBtn = document.getElementById("close");
             var playAgain = document.getElementById("playAgain")
 
-            var longPercentWin = (winArr.length/(winArr.length+lossArr.length))*100.0;
-            var percentWin = longPercentWin.toFixed(2)
+            var percentWin = ((winArr.length/(winArr.length+lossArr.length))*100.0).toFixed(2);
             var games = winArr.length+lossArr.length;
     
             var statMsg = "<br>You have played "+games+" times.  Your win rate is "+percentWin+ "%.<ul>Number of Guesses:</ul>"
