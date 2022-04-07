@@ -191,6 +191,7 @@ function Row(n)
 		
 		goodKey = document.getElementById(guess[i]);
                 goodKey.classList.add("good");
+		goodKey.classList.remove("maybe");
 
                 char[i] = "0";
                 guess[i] = "0";
