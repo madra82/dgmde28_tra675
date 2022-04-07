@@ -88,7 +88,7 @@ body {
 
 #gameContainer {
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 3.5em;
 }
 
 #gameContainer li {
@@ -104,13 +104,13 @@ body {
     border: thin solid;
     display: inline-block;
     box-sizing: border-box;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin: 0.1em;
     padding: 0.5em;
     vertical-align: middle;
     text-align: center;
-    font-size: 150%;
+    font-size: 170%;
     text-transform: uppercase;
     font-family: 'Architects Daughter','Calibri','sans-serif';
     caret-color: rgba(0,0,0,0);
@@ -229,7 +229,7 @@ body {
    right: 0;
    margin-left: auto;
    margin-right: auto;
-   margin-top: 2em;
+   margin-top: 5em;
    width: 350px;
    font-size: 80%;
    text-align: center;
@@ -296,14 +296,14 @@ body {
     text-align: center;
     margin: 0 auto;
     vertical-align: middle;
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 
 .keys {
-    margin: 0.2em;
-    height: 55px;
-    padding: 0.1em;
-    min-width: 55px;
+    margin: 0.1em;
+    height: 60px;
+    padding: 0.2em;
+    min-width: 60px;
     font-size: 120%;
     color: white;
     background-color: black;
@@ -353,6 +353,14 @@ body {
         min-width: 30px;
         font-size: 80%;
     }
+     
+     #onScreenKB {
+        margin-top: 0.5em;
+     }
+     
+     #gameContainer {
+        margin-top: 0.5em
+     }
 
     .cells {
         width: 55px;
@@ -414,6 +422,10 @@ body {
     #title {
         display: none;
     }
+     
+     #msgBox {
+        margin-top: 2em;
+     }
 
     #winMsg span {
         animation-name: wobb;
