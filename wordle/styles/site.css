@@ -303,6 +303,7 @@ body {
     margin: 0.1em;
     height: 60px;
     padding: 0.2em;
+    vertical-align: middle;
     min-width: 60px;
     font-size: 120%;
     color: white;
