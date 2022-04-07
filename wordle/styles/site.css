@@ -106,7 +106,7 @@ body {
     width: 90px;
     height: 90px;
     margin: 0.1em;
-    padding: 0.1em;
+    padding: auto;
     vertical-align: middle;
     text-align: center;
     font-size: 150%;
