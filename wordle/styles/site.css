@@ -1,6 +1,6 @@
 h1 {
     font-family: Cabin Sketch, Calibri, sans-serif;
-    font-size: 300%;
+    font-size: 400%;
     color: rgb(192,0,0);
     text-align: center;
     margin-bottom: 0.2em;
@@ -349,6 +349,10 @@ body {
 
 
  @media (min-width: 1000px) {
+     
+     h1{
+        font-size:300%;
+     }
 
     #playAgain{
         margin-top: 1em;
