@@ -114,7 +114,7 @@ body {
     padding: 0.75em;
     vertical-align: middle;
     text-align: center;
-    font-size: 170%;
+    font-size: 190%;
     text-transform: uppercase;
     font-family: 'Architects Daughter','Calibri','sans-serif';
     caret-color: rgba(0,0,0,0);
@@ -386,6 +386,7 @@ body {
         height: 55px;
         vertical-align: middle;
         padding: 0;
+        font-size: 150%;
     }
     
     #gridContainer {
