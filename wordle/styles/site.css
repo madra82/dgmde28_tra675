@@ -86,9 +86,13 @@ body {
 
 /* Game Grid & Cells */
 
+#gridContainer {
+    margin-top: 3.5em;
+}
+
 #gameContainer {
     text-align: center;
-    margin-top: 3.5em;
+    margin-top: 0.5em;
 }
 
 #gameContainer li {
@@ -107,7 +111,7 @@ body {
     width: 120px;
     height: 120px;
     margin: 0.1em;
-    padding: 0.5em;
+    padding: 0.7em;
     vertical-align: middle;
     text-align: center;
     font-size: 170%;
@@ -296,13 +300,13 @@ body {
     text-align: center;
     margin: 0 auto;
     vertical-align: middle;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .keys {
-    margin: 0.1em;
+    margin: 0.3em;
     height: 60px;
-    padding: 0.2em;
+    padding: 0.3em;
     vertical-align: middle;
     min-width: 60px;
     font-size: 120%;
@@ -358,10 +362,6 @@ body {
      #onScreenKB {
         margin-top: 0.5em;
      }
-     
-     #gameContainer {
-        margin-top: 0.5em
-     }
 
     .cells {
         width: 55px;
@@ -372,6 +372,7 @@ body {
     
     #gridContainer {
         display: grid;
+        margin-top: 0;
         grid-template-columns: 30% 40% 30%;
     }
 
