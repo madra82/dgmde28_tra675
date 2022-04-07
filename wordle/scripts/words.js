@@ -571,14 +571,7 @@ function addListeners()
 
     function clearBoard(){
 
-        boxes = document.querySelectorAll(".cells")
-        boxes.forEach(function(box){
-            box.textContent="";
-            box.classList.remove("correct");
-            box.classList.remove("partial");
-            box.classList.remove("wrong");
-        })
-
+        var boxes = document.querySelectorAll(".cells")
         var elimLetterHolder = document.getElementById("elimLetterHolder");
         var eliminated = document.getElementById("eliminated");
         var expBox = document.getElementById("explainGuess")
@@ -587,6 +580,18 @@ function addListeners()
         var msgBox = document.getElementById("msgBox");
         var kbKeys = document.querySelectorAll(".keys")
 
+	boxes.forEach(function(box){
+            box.textContent="";
+            box.classList.remove("correct");
+            box.classList.remove("partial");
+            box.classList.remove("wrong");
+        })
+	
+	kbKeys.forEach(function(kbKey){
+	    kbKey.classList.remove("blackout");
+	    kbKey.classList.remove("good");
+	    kbKey.classList.remove("maybe");
+	})
 
         elimLetters.clear()
         elimLetterHolder.textContent = "";
