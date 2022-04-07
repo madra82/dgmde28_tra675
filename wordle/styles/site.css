@@ -119,8 +119,8 @@ body {
     border: thin solid;
     display: inline-block;
     box-sizing: border-box;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin: 0.1em;
     padding: 0.1em;
     vertical-align: middle;
@@ -335,7 +335,13 @@ body {
 
 
  @media (min-width: 1000px) {
-    #gridContainer {
+    .cells {
+        width: 60px;
+        height: 60px;
+    }
+    
+     
+     #gridContainer {
         display: grid;
         grid-template-columns: 30% 40% 30%;
     }
