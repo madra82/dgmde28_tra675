@@ -223,8 +223,10 @@ function Row(n)
 
         elimLetterHolder.textContent = "";
         
-        for (i of elimLetters)
-        {elimLetterHolder.textContent += i+"   "};
+        elimArray = Array.from(elimLetters).sort();
+        
+        for (i in elimArray)
+        {elimLetterHolder.textContent += elimArray[i]+"   "};
     }
 
 
