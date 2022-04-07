@@ -174,12 +174,8 @@ function Row(n)
         var explain = document.getElementById("explainText");
         var expBox = document.getElementById("explainGuess")
 
-
         eliminated.classList.remove("hide");
         expBox.classList.remove("hide");
-
-        console.log(guess);
-        console.log(char);
         
 
         for (i in guess)
@@ -200,6 +196,9 @@ function Row(n)
             {
                 this.cells[i].notIncluded();
                 elimLetters.add(guess[i]);
+		    
+		key = document.getElementById(guess[i]);
+                key.classList.add("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is not in the word<br>"
             }
