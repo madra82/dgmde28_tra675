@@ -75,7 +75,7 @@ body {
 }
 
 #ruleContents {
-    font-size: 60%;
+    font-size: 70%;
 }
 
 #large {
@@ -104,8 +104,8 @@ body {
     border: thin solid;
     display: inline-block;
     box-sizing: border-box;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     margin: 0.1em;
     padding: 0.5em;
     vertical-align: middle;
@@ -301,9 +301,9 @@ body {
 
 .keys {
     margin: 0.2em;
-    height: 50px;
-    padding: 0;
-    min-width: 50px;
+    height: 55px;
+    padding: 0.1em;
+    min-width: 55px;
     font-size: 120%;
     color: white;
     background-color: black;
