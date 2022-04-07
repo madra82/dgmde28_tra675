@@ -66,7 +66,7 @@ body {
     border-style: solid;
     padding:0.5em;
     border-color: black;
-    width: 60%;
+    width: 50%;
     background-image: url("/images/close-button.svg");
     background-size: 0.8em;
     background-position: right 0.2em top 0.1em;
@@ -90,8 +90,18 @@ body {
     display: inline-block;
     text-align: left;
     margin: 0;
-    padding-left: 1.5em;
-    font-size: 70%;
+}
+
+#outerUL {
+    padding-left: 0;
+}
+
+#innerUL {
+    padding-left: 2em;
+}
+
+#ruleContents {
+    font-size: 40%;
 }
 
 #large {
@@ -128,7 +138,6 @@ body {
     font-size: 150%;
     text-transform: uppercase;
     font-family: 'Architects Daughter','Calibri','sans-serif';
-    cursor: none;
     caret-color: rgba(0,0,0,0);
 }
 
@@ -271,6 +280,7 @@ body {
 }
 
 
+
 /* Buttons */
 
 #playAgainBtnWrapper {
@@ -340,15 +350,15 @@ body {
         height: 60px;
     }
     
-     
-     #gridContainer {
+    #gridContainer {
         display: grid;
         grid-template-columns: 30% 40% 30%;
     }
 
-    #rules ul {
-        font-size: 80%;
+    #ruleContents {
+        font-size: 70%;
         margin-top: 0;
+        padding-left: 1.5em;
     }
 
     #small {
