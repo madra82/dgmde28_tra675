@@ -382,6 +382,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     createGame();
     addListeners();
+    gameBox.currentRow().cells[0].focus();
 })
 
 
