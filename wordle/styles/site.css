@@ -88,6 +88,7 @@ body {
 
 #gameContainer {
     text-align: center;
+    margin-top: 0.5em;
 }
 
 #gameContainer li {
@@ -106,8 +107,7 @@ body {
     width: 90px;
     height: 90px;
     margin: 0.1em;
-    padding: auto;
-    vertical-align: middle;
+    padding: 0.5em;
     text-align: center;
     font-size: 150%;
     text-transform: uppercase;
@@ -294,7 +294,8 @@ body {
 #onScreenKB {
     text-align: center;
     margin: 0 auto;
-    margin-top: 0.2em;
+    vertical-align: middle;
+    margin-top: 0.5em;
 }
 
 .keys {
@@ -354,6 +355,8 @@ body {
     .cells {
         width: 55px;
         height: 55px;
+        vertical-align: middle;
+        padding: 0;
     }
     
     #gridContainer {
@@ -388,13 +391,13 @@ body {
 
     #eliminated {
         display: block;
-        width: 60%;
-        height: 150px;
+        width: 70%;
+        height: 130px;
     }
 
     #explainGuess {
         display: block;
-        width: 60%;
+        width: 70%;
         height: 165px;
     }
 
