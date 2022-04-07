@@ -513,6 +513,16 @@ function addListeners()
 
     
     //Track Keys
+	
+	var cells = document.querySelectorAll(".cells");
+
+    	cells.forEach(function(cell)
+	{
+		cell.addEventListener("keyup",function(event)
+		{
+			event.preventDefault();
+        	})
+    	})
     document.addEventListener("keyup", trackKeys)
 }
     
