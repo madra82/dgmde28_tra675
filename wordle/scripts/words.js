@@ -163,10 +163,10 @@ function Row(n)
 
     function checkGuess()
     {
-        var guessStr = this.getGuess();
+        var guessStr = this.getGuess().toUpperCase();
         var guess = guessStr.split("")
 
-        var ans = document.getElementById("answer").textContent;
+        var ans = document.getElementById("answer").textContent.toUpperCase();
         var char = ans.split("");
 
         var elimLetterHolder = document.getElementById("elimLetterHolder");
