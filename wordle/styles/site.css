@@ -358,8 +358,9 @@ body {
         margin-top: 1em;
     }
     .keys {
-        height: 30px;
-        min-width: 30px;
+        height: 40px;
+        min-width: 40px;
+        padding: 0.1em;
         font-size: 80%;
     }
      
