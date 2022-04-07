@@ -231,7 +231,7 @@ function Row(n)
             }
             }
         
-        setTimeout(this.checkWinOrLoss(),3000);
+        checkWinOrLoss();
 
         elimLetterHolder.textContent = "";
         
@@ -274,7 +274,7 @@ function Row(n)
             rowArr.push(this.number);
             localStorage.setItem('wins',winArr.toString());
             localStorage.setItem('rows',rowArr.toString());
-            gameOverMessage();
+            setTimeout(gameOverMessage,1000);
         }
 
         else if (rowNumber == 5)
@@ -285,7 +285,7 @@ function Row(n)
             })
             lossArr.push('loss');
             localStorage.setItem('losses',lossArr.toString());
-            gameOverMessage();
+            setTimeout(gameOverMessage,1000);
         }
 
         rowNumber += 1;
