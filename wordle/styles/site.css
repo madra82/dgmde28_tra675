@@ -108,6 +108,7 @@ body {
     height: 90px;
     margin: 0.1em;
     padding: 0.5em;
+    vertical-align: middle;
     text-align: center;
     font-size: 150%;
     text-transform: uppercase;
