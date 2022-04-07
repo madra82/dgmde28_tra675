@@ -177,6 +177,8 @@ function Row(n)
         eliminated.classList.remove("hide");
         expBox.classList.remove("hide");
         
+	console.log(char);
+	console.log(guess);
 
         for (i in guess)
         {
