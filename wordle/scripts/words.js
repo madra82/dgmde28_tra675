@@ -231,7 +231,7 @@ function Row(n)
             }
             }
         
-        checkWinOrLoss();
+        this.checkWinOrLoss();
 
         elimLetterHolder.textContent = "";
         
