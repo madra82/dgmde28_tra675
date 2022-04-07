@@ -177,6 +177,9 @@ function Row(n)
 
         eliminated.classList.remove("hide");
         expBox.classList.remove("hide");
+
+        console.log(guess);
+        console.log(char);
         
 
         for (i in guess)
@@ -280,6 +283,7 @@ function Row(n)
             var msgBox = document.getElementById("msgBox");
             var msg = document.getElementById("msgText");
             var closeBtn = document.getElementById("close");
+            var playAgain = document.getElementById("playAgain")
 
             var longPercentWin = (winArr.length/(winArr.length+lossArr.length))*100.0;
             var percentWin = longPercentWin.toFixed(2)
@@ -290,6 +294,7 @@ function Row(n)
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
             closeBtn.focus();
+            playAgain.classList.remove("hide");
 
             //Animate
 
@@ -548,7 +553,7 @@ function addListeners()
         letter = 0;
         clearBoard();
         getWord();
-        play.blur();
+        play.classList.add("hide");
     })
 
     function clearBoard(){
@@ -567,6 +572,8 @@ function addListeners()
         var explain = document.getElementById("explainText");
         var ans = document.getElementById("answer");
         var msgBox = document.getElementById("msgBox");
+        var kbKeys = document.querySelectorAll(".keys")
+
 
         elimLetters.clear()
         elimLetterHolder.textContent = "";
@@ -579,6 +586,9 @@ function addListeners()
         msgBox.classList.add("hide");
 
         document.addEventListener("keyup", trackKeys)
+        kbKeys.forEach(function(kbKey){
+            kbKey.addEventListener("click", trackBtns)
+        })
     }
 
 
@@ -594,7 +604,7 @@ function addListeners()
 
     
     //Track Keys
-    kbKeys = document.querySelectorAll(".keys")
+    var kbKeys = document.querySelectorAll(".keys")
 
     kbKeys.forEach(function(kbKey){
         kbKey.addEventListener("click", trackBtns)
