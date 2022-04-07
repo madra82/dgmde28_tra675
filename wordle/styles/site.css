@@ -1,6 +1,6 @@
 h1 {
     font-family: Cabin Sketch, Calibri, sans-serif;
-    font-size: 400%;
+    font-size: 500%;
     color: rgb(192,0,0);
     text-align: center;
     margin-bottom: 0.2em;
@@ -111,7 +111,7 @@ body {
     width: 120px;
     height: 120px;
     margin: 0.1em;
-    padding: 0.7em;
+    padding: 0.75em;
     vertical-align: middle;
     text-align: center;
     font-size: 170%;
