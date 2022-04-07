@@ -1,0 +1,441 @@
+h1 {
+    font-family: Cabin Sketch, Calibri, sans-serif;
+    font-size: 300%;
+    color: rgb(192,0,0);
+    text-align: center;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Cabin Sketch, Calibri, sans-serif;
+    color: rgb(192,0,0);
+    font-size: 90%;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    text-align: center;
+}
+
+body {
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+    font-size: 150%;
+    margin-top: 0;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+/* Rules Column */
+
+#rules {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    border-style: solid;
+    padding:0.5em;
+    border-color: black;
+    width: 50%;
+    background-image: url("/images/close-button.svg");
+    background-size: 0.8em;
+    background-position: right 0.2em top 0.1em;
+    background-repeat: no-repeat;
+}
+
+#rulesTitle {
+    font-size: 70%;
+    background-image: url("/images/mono-kdevelop-down.svg");
+    background-size: 1em;
+    background-position: right 0.2em top 0.1em;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em;
+    width: 150px;
+}
+
+#rules ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+}
+
+#outerUL {
+    padding-left: 1.5em;
+}
+
+#innerUL {
+    padding-left: 2em;
+}
+
+#ruleContents {
+    font-size: 60%;
+}
+
+#large {
+    display: none;
+}
+
+
+
+/* Game Grid & Cells */
+
+#gameContainer {
+    text-align: center;
+}
+
+#gameContainer li {
+    list-style: none;
+}
+
+#gameContainer ul {
+    padding: 0;
+    margin: 0;;
+}
+
+.cells {
+    border: thin solid;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    margin: 0.1em;
+    padding: 0.1em;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 150%;
+    text-transform: uppercase;
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+    caret-color: rgba(0,0,0,0);
+}
+
+.correct {
+    transition: background-color 5s ease;
+    background-color: white;
+    border-color: white;
+}
+
+.partial {
+    transition: background-color 5s ease;
+    background-color: rgb(218,165,32);
+    color: white;
+}
+
+.wrong {
+    transition: background-color 5s ease;
+    background-color: rgb(64,64,64);
+    color: white;
+}
+
+.letters {
+    text-transform: uppercase;
+}
+
+
+
+/* Eliminated Letters & Explain Guess*/
+
+#gridCol3 {
+    text-align: center;
+}
+
+#eliminated, #explainGuess {
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    height: 160px;
+    width: 40%;
+    padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5em;
+    vertical-align: top;  
+}
+
+#eliminated.hide, #explainGuess.hide {
+    display: none;
+}
+
+#explainText{
+    font-size: 60%;
+}
+
+#elimLetterHolder {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 100%;
+}
+
+
+
+/* Debug & Messages */
+
+#debugBtnWrapper {
+   text-align: right;
+}
+
+#answerBox, #debugMsg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
+    position: absolute;
+    right: 0;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#answer {
+    text-transform: uppercase;
+}
+
+#answerBox {
+    height: 30px;
+    font-size: 50%;
+    background-image: url("/images/close-button.svg");
+    background-size: 0.8em;
+    background-position: right 0.2em top 0.1em;
+    background-repeat: no-repeat;
+    padding-top: 1.2em;
+}
+
+#debugMsg {
+    width: 130px;
+    border: thin solid;
+    background-color: white;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 50%;
+    font-style: italic;
+}
+
+#debugMsg p {
+    margin-top: 0;
+}
+
+#msgContainer{
+    position:relative;
+}
+
+#msgBox {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2em;
+   width: 350px;
+   font-size: 80%;
+   text-align: center;
+   padding: 0.5em;
+   padding-bottom: 1.5em;
+   background-color: white;
+   border: thin solid;
+}
+
+#msgBox p {
+   margin-top: 0;
+   margin-bottom: 1.5em;
+}
+
+#msgBox li {
+   list-style: none ;
+}
+
+#msgBox ul {
+   padding: 0;
+   margin-bottom: 0.5em;
+   font-weight: bold;
+}
+
+
+
+/* Buttons */
+
+#playAgainBtnWrapper {
+    text-align: center;
+}
+
+#playAgain, #close {
+    background-color: rgb(192,0,0);
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+    color: white;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+ #playAgain {
+    font-size: 100%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+ }
+
+ #close {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5em;
+    margin: auto;
+    width: 50px;
+    padding: 0.5em;
+ }
+
+
+
+ /* Keyboard */
+
+#onScreenKB {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.2em;
+}
+
+.keys {
+    margin: 0.2em;
+    height: 40px;
+    min-width: 40px;
+    font-size: 100%;
+    font-family: 'Architects Daughter','Calibri','sans-serif';
+}
+
+ @media (min-width: 600px) {
+    #explainGuess, #eliminated {
+        height: 200px;
+    }
+
+    #explainText {
+        font-size: 80%;
+    }
+
+    #elimLetterHolder {
+        font-size: 110%;
+    }
+
+    #title {
+        margin-right: 50px;
+    }
+
+    #answerBox {
+        font-size: 70%;
+    }
+ }
+
+ @media (min-width: 810px) {
+    #explainGuess, #eliminated {
+        width: 30%;
+    }
+
+    #title {
+        margin-right: 90px;
+    }
+ }
+
+
+ @media (min-width: 1000px) {
+
+    #playAgain{
+        margin-top: 1em;
+    }
+    .keys {
+        height: 30px;
+        min-width: 30px;
+        font-size: 80%;
+    }
+
+    .cells {
+        width: 55px;
+        height: 55px;
+    }
+    
+    #gridContainer {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+
+    #ruleContents {
+        font-size: 70%;
+        margin-top: 0;
+        padding-left: 1.5em;
+    }
+
+    #small {
+        display: none;
+    }
+
+    #large {
+        display: list-item;
+    }
+
+    #rules {
+        background-image: none;
+        border-style: none;
+        width: 100%;
+        display: inline;
+    }
+
+    #rulesTitle {
+        display: none;
+    }
+
+    #eliminated {
+        display: block;
+        width: 60%;
+        height: 150px;
+    }
+
+    #explainGuess {
+        display: block;
+        width: 60%;
+        height: 165px;
+    }
+
+    #explainText {
+        font-size: 60%;
+    }
+
+    #elimLetterHolder {
+        font-size: 98%;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #winMsg span {
+        animation-name: wobb;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 400ms;
+        display: inline-block;
+        transform: translateY(0px);
+    }
+
+    #winMsg {
+        margin: 0;
+        font-size: 180%;
+    }
+
+    @keyframes wobb {
+        0%, 100% {transform: translateY(0px)}
+        25% {transform: translateY(-2px)}
+        75% {transform: translateY(2px)}
+    }
+
+ }
+
+ @media (min-width: 1190px) {
+    #explainGuess {
+        height: 175px;
+    }
+
+    #explainText {
+        font-size: 70%;
+    }
+ }
