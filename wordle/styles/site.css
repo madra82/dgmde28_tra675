@@ -300,8 +300,9 @@ body {
 
 .keys {
     margin: 0.2em;
-    height: 60px;
-    min-width: 60px;
+    height: 55px;
+    padding: 0;
+    min-width: 55px;
     font-size: 120%;
     color: white;
     background-color: black;
