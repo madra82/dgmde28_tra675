@@ -315,6 +315,10 @@ body {
     font-family: 'Architects Daughter','Calibri','sans-serif';
 }
 
+.blackout{
+    color: black;
+}
+
  @media (min-width: 600px) {
     #explainGuess, #eliminated {
         height: 200px;
