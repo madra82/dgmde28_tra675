@@ -20,6 +20,7 @@ body {
     font-family: 'Architects Daughter','Calibri','sans-serif';
     font-size: 150%;
     margin-top: 0;
+    min-height: 800px;
 }
 
 
@@ -93,6 +94,7 @@ body {
 #gameContainer {
     text-align: center;
     margin-top: 0.5em;
+    vertical-align: top;
 }
 
 #gameContainer li {
@@ -114,10 +116,9 @@ body {
     padding: 0.75em;
     vertical-align: middle;
     text-align: center;
-    font-size: 190%;
+    font-size: 170%;
     text-transform: uppercase;
     font-family: 'Architects Daughter','Calibri','sans-serif';
-    caret-color: rgba(0,0,0,0);
 }
 
 .correct {
@@ -225,6 +226,7 @@ body {
 
 #msgContainer{
     position:relative;
+
 }
 
 #msgBox {
@@ -233,6 +235,7 @@ body {
    right: 0;
    margin-left: auto;
    margin-right: auto;
+   vertical-align: top;
    margin-top: 5em;
    width: 350px;
    font-size: 80%;
@@ -264,6 +267,7 @@ body {
 
 #playAgainBtnWrapper {
     text-align: center;
+    vertical-align: top;
 }
 
 #playAgain, #close {
@@ -271,7 +275,7 @@ body {
     font-family: 'Architects Daughter','Calibri','sans-serif';
     color: white;
     text-align: center;
-    margin-top: 0.5em;
+    vertical-align: top;
 }
 
  #playAgain {
@@ -299,8 +303,9 @@ body {
 #onScreenKB {
     text-align: center;
     margin: 0 auto;
-    vertical-align: middle;
+    vertical-align: top;
     margin-top: 2em;
+    margin-bottom: 0.2em;
 }
 
 .keys {
@@ -316,7 +321,7 @@ body {
 }
 
 .blackout{
-    color: black;
+    color: rgb(90,90,90)
 }
 
 .good {
@@ -328,7 +333,32 @@ body {
     background-color: rgb(218,165,32);
 }
 
+
+
+/* Animation */
+
+#winMsg span {
+    animation-name: wobb;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 400ms;
+    display: inline-block;
+    transform: translateY(0px);
+}
+
+#winMsg {
+    margin: 0;
+    font-size: 180%;
+}
+
+@keyframes wobb {
+    0%, 100% {transform: translateY(0px)}
+    25% {transform: translateY(-2px)}
+    75% {transform: translateY(2px)}
+}
+
  @media (min-width: 600px) {
+
     #explainGuess, #eliminated {
         height: 200px;
     }
@@ -341,10 +371,6 @@ body {
         font-size: 110%;
     }
 
-    #title {
-        margin-right: 50px;
-    }
-
     #answerBox {
         font-size: 70%;
     }
@@ -353,10 +379,6 @@ body {
  @media (min-width: 810px) {
     #explainGuess, #eliminated {
         width: 30%;
-    }
-
-    #title {
-        margin-right: 90px;
     }
  }
 
@@ -367,38 +389,38 @@ body {
         font-size:300%;
      }
 
-    #playAgain{
-        margin-top: 0.5em;
+     /* Game */
+
+     #gridContainer {
+        display: grid;
+        margin-top: 0;
+        grid-template-columns: 30% 40% 30%;
     }
-    .keys {
-        height: 40px;
-        min-width: 40px;
-        padding: 0.3em;
-        font-size: 80%;
-    }
-     
-     #onScreenKB {
-        margin-top: 0.5em;
-     }
 
     .cells {
         width: 55px;
         height: 55px;
         vertical-align: middle;
         padding: 0;
-        font-size: 150%;
     }
-    
-    #gridContainer {
-        display: grid;
-        margin-top: 0;
-        grid-template-columns: 30% 40% 30%;
+ 
+    /* Rules */
+
+    #rules {
+        background-image: none;
+        border-style: none;
+        width: 100%;
+        display: inline;
     }
 
     #ruleContents {
-        font-size: 70%;
+        font-size: 60%;
         margin-top: 0;
         padding-left: 1.5em;
+    }
+
+    #rulesTitle {
+        display: none;
     }
 
     #small {
@@ -409,22 +431,7 @@ body {
         display: list-item;
     }
 
-    #rules {
-        background-image: none;
-        border-style: none;
-        width: 100%;
-        display: inline;
-    }
-
-    #rulesTitle {
-        display: none;
-    }
-
-    #eliminated {
-        display: block;
-        width: 70%;
-        height: 130px;
-    }
+    /* Explanation & Elim Letters */
 
     #explainGuess {
         display: block;
@@ -440,34 +447,30 @@ body {
         font-size: 98%;
     }
 
-    #title {
-        display: none;
+    #eliminated {
+        display: block;
+        width: 70%;
+        height: 130px;
     }
+
+    /* MsgBox */
      
      #msgBox {
         margin-top: 2em;
      }
 
-    #winMsg span {
-        animation-name: wobb;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-duration: 400ms;
-        display: inline-block;
-        transform: translateY(0px);
-    }
+     /* Keyboard */
 
-    #winMsg {
-        margin: 0;
-        font-size: 180%;
+     .keys {
+        height: 40px;
+        min-width: 40px;
+        padding: 0.3em;
+        font-size: 80%;
     }
-
-    @keyframes wobb {
-        0%, 100% {transform: translateY(0px)}
-        25% {transform: translateY(-2px)}
-        75% {transform: translateY(2px)}
-    }
-
+     
+     #onScreenKB {
+        margin-top: 0.5em;
+     }
  }
 
  @media (min-width: 1190px) {
