@@ -300,9 +300,11 @@ function Row(n)
             var playAgain = document.getElementById("playAgain")
 
             var percentWin = ((winArr.length/(winArr.length+lossArr.length))*100.0).toFixed(2);
+	    var wins = winArr.length;
+            var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
     
-            var statMsg = "<br>You have played "+games+" times.  Your win rate is "+percentWin+ "%.<ul>Number of Guesses:</ul>"
+            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
@@ -320,7 +322,7 @@ function Row(n)
 
             if (win == true)
             {
-                msg.innerHTML = "<h2 id = 'winMsg'>"+textCode.join("")+"</h3>"+statMsg;
+                msg.innerHTML = "<h2 id = 'winMsg'>"+textCode.join("")+"</h2>"+statMsg;
             }
             else    
             {
