@@ -304,7 +304,7 @@ function Row(n)
             var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
     
-            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
+            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" losses for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
