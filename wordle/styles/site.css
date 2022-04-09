@@ -3,7 +3,7 @@ h1 {
     font-size: 500%;
     color: rgb(192,0,0);
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 2em;
     margin-top: 0;
 }
 
@@ -90,7 +90,7 @@ body {
 /* Game Grid & Cells */
 
 #gridContainer {
-    margin-top: 3.5em;
+    margin-top: 2em;
     vertical-align: top;
 }
 
@@ -186,8 +186,8 @@ body {
 /* Debug & Messages */
 
 #debug {
-    height: 30px;
-    font-size: 70%;
+    height: 50px;
+    font-size: 80%;
 }
 
 #debugBtnWrapper {
@@ -236,7 +236,7 @@ body {
     text-align: center;
     vertical-align: top;
     min-height: 25px;
-    font-size: 70%;
+    font-size: 100%;
 }
 
 #msgContainer{
@@ -508,7 +508,13 @@ body {
      #playAgain {
          margin-top: 0.3em;
      }
- }
+     
+     /*ErrMsg */
+     
+     #errMsg {
+    font-size: 70%;
+    }
+}
 
  @media (min-width: 1190px) {
     #explainGuess {
