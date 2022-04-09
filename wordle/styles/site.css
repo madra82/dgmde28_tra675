@@ -466,7 +466,7 @@ body {
     #explainGuess {
         display: block;
         width: 70%;
-        height: 165px;
+        height: 140px;
     }
 
     #explainText {
@@ -474,13 +474,13 @@ body {
     }
 
     #elimLetterHolder {
-        font-size: 98%;
+        font-size: 90%;
     }
 
     #eliminated {
         display: block;
-        width: 70%;
-        height: 130px;
+        width: 90%;
+        height: 110px;
     }
 
     /* MsgBox */
@@ -512,7 +512,7 @@ body {
 
  @media (min-width: 1190px) {
     #explainGuess {
-        height: 175px;
+        height: 155px;
     }
 
     #explainText {
