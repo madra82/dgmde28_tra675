@@ -567,6 +567,7 @@ function addListeners()
         letter = 0;
         clearBoard();
         getWord();
+	play.blur();
     })
 
     function clearBoard(){
