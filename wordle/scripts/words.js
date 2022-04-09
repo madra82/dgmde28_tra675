@@ -58,7 +58,6 @@ function Row(n)
     this.checkLetters = checkLetters;
     this.checkGuess = checkGuess; 
     this.checkWinOrLoss = checkWinOrLoss;
-    this.clearRow = clearRow;
 }
 
     function addCells()
@@ -119,13 +118,12 @@ function Row(n)
 
     function checkLetters()
     {
-        var msgBox = document.getElementById("msgBox")
-        var msg = document.getElementById("msgText")
+        var msg = document.getElementById("errMsg");
 
         if (letter <= 4)
         {
             msg.innerHTML = "You have not entered a five letter word.  Please try again.";
-            msgBox.classList.remove("hide");
+            turnOnTracking();
         }
         else
         {
@@ -146,21 +144,6 @@ function Row(n)
     }
 
 
-    function clearRow()
-    {
-        var msgBox = document.getElementById("msgBox");
-        var msg = document.getElementById("msgText");
-        
-        msg.innerHTML = "The dictionary cannot find your word. Please try again."; 
-        msgBox.classList.remove("hide");
-        
-        for (i in this.cells)
-        {var box = document.getElementById(this.cells[i].id)
-        box.textContent = ""};
-        letter = 0;
-    }
-
-
     function checkGuess()
     {
         var guessStr = this.getGuess().toUpperCase();
@@ -176,7 +159,7 @@ function Row(n)
 
         eliminated.classList.remove("hide");
         expBox.classList.remove("hide");
-	    
+
 
         for (i in guess)
         {
@@ -188,10 +171,10 @@ function Row(n)
                 this.cells[i].correctPlace();
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the right place<br>"
-		
-		goodKey = document.getElementById(guess[i]);
+
+                goodKey = document.getElementById(guess[i]);
                 goodKey.classList.add("good");
-		goodKey.classList.remove("maybe");
+                goodKey.classList.remove("maybe");
 
                 char[i] = "0";
                 guess[i] = "0";
@@ -200,16 +183,16 @@ function Row(n)
             {
                 this.cells[i].notIncluded();
                 elimLetters.add(guess[i]);
-		    
-		badKey1 = document.getElementById(guess[i]);
-                badKey1.classList.add("blackout");
+
+                badKey = document.getElementById(guess[i]);
+                badKey.classList.add("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is not in the word<br>"
             }
             else if (guess[i] != 0 && guessCount > ansCount) 
             {
                 this.cells[i].notIncluded();
-		elimLetters.add(guess[i]);
+                elimLetters.add(guess[i]);
 
                 badKey2 = document.getElementById(guess[i]);
                 badKey2.classList.add("blackout");
@@ -221,8 +204,8 @@ function Row(n)
             else if (guess[i] != 0)
             {
                 this.cells[i].inWord();
-		    
-		maybeKey = document.getElementById(guess[i]);
+
+                maybeKey = document.getElementById(guess[i]);
                 maybeKey.classList.add("maybe");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the wrong place<br>"
@@ -232,7 +215,7 @@ function Row(n)
         this.checkWinOrLoss();
 
         elimLetterHolder.textContent = "";
-        
+
         elimArray = Array.from(elimLetters).sort();
         
         for (i in elimArray)
@@ -286,6 +269,11 @@ function Row(n)
             setTimeout(gameOverMessage,1000);
         }
 
+        else 
+        {
+            turnOnTracking();
+        }
+
         rowNumber += 1;
         letter = 0;  
 
@@ -296,12 +284,12 @@ function Row(n)
             var msg = document.getElementById("msgText");
             var closeBtn = document.getElementById("close");
 
-            var percentWin = ((winArr.length/(winArr.length+lossArr.length))*100.0).toFixed(2);
-	    var wins = winArr.length;
+            var percentWin = ((winArr.length/(winArr.length+lossArr.length))*100.0).toFixed(2)
+            var wins = winArr.length;
             var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
     
-            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" losses for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
+            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
@@ -530,7 +518,6 @@ function addListeners()
     debugNo.addEventListener("click",function()
     {  
         debugMsg.classList.add("hide");
-	answer.classList.add("hide");
     })
 
     answer.addEventListener("click",function()
@@ -565,11 +552,11 @@ function addListeners()
         letter = 0;
         clearBoard();
         getWord();
-	play.blur();
+        play.blur();
     })
 
-    function clearBoard(){
-
+    function clearBoard()
+    {
         var boxes = document.querySelectorAll(".cells")
         var elimLetterHolder = document.getElementById("elimLetterHolder");
         var eliminated = document.getElementById("eliminated");
@@ -579,18 +566,18 @@ function addListeners()
         var msgBox = document.getElementById("msgBox");
         var kbKeys = document.querySelectorAll(".keys")
 
-	boxes.forEach(function(box){
+        boxes.forEach(function(box){
             box.textContent="";
             box.classList.remove("correct");
             box.classList.remove("partial");
             box.classList.remove("wrong");
         })
-	
-	kbKeys.forEach(function(kbKey){
-	    kbKey.classList.remove("blackout");
-	    kbKey.classList.remove("good");
-	    kbKey.classList.remove("maybe");
-	})
+
+        kbKeys.forEach(function(kbKey){
+            kbKey.classList.remove("blackout");
+            kbKey.classList.remove("good");
+            kbKey.classList.remove("maybe");
+        })
 
         elimLetters.clear()
         elimLetterHolder.textContent = "";
@@ -602,10 +589,7 @@ function addListeners()
         ans.innerHTML = "";
         msgBox.classList.add("hide");
 
-        document.addEventListener("keyup", trackKeys)
-        kbKeys.forEach(function(kbKey){
-            kbKey.addEventListener("click", trackBtns)
-        })
+        turnOnTracking();
     }
 
 
@@ -619,40 +603,51 @@ function addListeners()
         msgBox.classList.add("hide");
     })
 
-    
     //Track Keys
-    var kbKeys = document.querySelectorAll(".keys")
 
+    turnOnTracking();
+}
+
+function turnOnTracking(){
+    var kbKeys = document.querySelectorAll(".keys")
     kbKeys.forEach(function(kbKey){
         kbKey.addEventListener("click", trackBtns)
     })
 
     document.addEventListener("keyup", trackKeys)
 }
+
+function turnOffTracking(){
+    var kbKeys = document.querySelectorAll(".keys")
+    kbKeys.forEach(function(kbKey){
+        kbKey.removeEventListener("click", trackBtns)
+    })
+
+    document.removeEventListener("keyup", trackKeys)
+}
     
 function trackKeys(k)
 {
     var regex = /[a-zA-Z]/g;
-    var msgBox = document.getElementById("msgBox");
+    var msg = document.getElementById("errMsg");
 
     var key
     key = k.key || k.id;
 
     var ok = key.match(regex);
 
-    if (key == "Enter" && !msgBox.classList.contains("hide"))
-    {
-        msgBox.classList.add("hide");
-    }
+    console.log(key);
 
-    else if (key == "Enter" && msgBox.classList.contains("hide"))
+    if (key == "Enter")
     {
+        turnOffTracking();
         gameBox.currentRow().checkLetters();
     }
     
     else if (key == "Backspace")
     {
-        gameBox.currentRow().deleteLetter()
+        gameBox.currentRow().deleteLetter();
+        msg.innerHTML="";
     }
         
     else if (!ok || ok.length > 1) 
@@ -662,35 +657,34 @@ function trackKeys(k)
 
     else 
     {
-        gameBox.currentRow().addLetter(key)
+        gameBox.currentRow().addLetter(key);
+        msg.innerHTML="";
     }
 }
 
 
 function trackBtns()
 {
-    var msgBox = document.getElementById("msgBox");
+    var msg = document.getElementById("errMsg");
 
     var key = this.id
 
-    if (key == "Enter" && !msgBox.classList.contains("hide"))
+    if (key == "Enter")
     {
-        msgBox.classList.add("hide");
-    }
-
-    else if (key == "Enter" && msgBox.classList.contains("hide"))
-    {
+        turnOffTracking();
         gameBox.currentRow().checkLetters();
     }
     
     else if (key == "Backspace")
     {
-        gameBox.currentRow().deleteLetter()
+        gameBox.currentRow().deleteLetter();
+        msg.innerHTML="";
     }
 
     else 
     {
-        gameBox.currentRow().addLetter(key)
+        gameBox.currentRow().addLetter(key);
+        msg.innerHTML="";
     }
 }
 
@@ -711,7 +705,7 @@ function getWord()
 
     fetch('https://wordsapiv1.p.rapidapi.com/words/?random=true&?hasDetails=definitions&letters=5&frequencyMin=4&?letterPattern=^[a-z]*$/', options)
     .then(response => response.json())
-    .then(response => {document.getElementById("answer").innerHTML = response.word})
+    .then(response => {console.log(response);document.getElementById("answer").innerHTML = response.word})
     .catch(err => console.error(err));
 }
 
@@ -742,7 +736,9 @@ function checkWord()
             } 
             else if ('success' in response) 
             {
-                gameBox.currentRow().clearRow()
+                var msg = document.getElementById("errMsg");
+                msg.innerHTML = "The dictionary cannot find your word. Please try again."; 
+                turnOnTracking();
             }
         }
         )
