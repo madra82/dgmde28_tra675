@@ -518,6 +518,7 @@ function addListeners()
     debugNo.addEventListener("click",function()
     {  
         debugMsg.classList.add("hide");
+	answer.classList.add("hide");
     })
 
     answer.addEventListener("click",function()
