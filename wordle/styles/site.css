@@ -328,10 +328,11 @@ body {
 .keys {
     margin: 0.3em;
     height: 60px;
-    padding: 0.3em;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
     vertical-align: middle;
     min-width: 60px;
-    font-size: 120%;
+    font-size: 150%;
     color: white;
     background-color: black;
     font-family: 'Architects Daughter','Calibri','sans-serif';
