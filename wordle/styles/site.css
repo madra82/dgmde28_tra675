@@ -193,7 +193,6 @@ body {
 
 #answerBox, #debugMsg {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 75%;
     position: absolute;
     right: 0;
     margin-right: 0.5em;
@@ -221,7 +220,7 @@ body {
     background-color: white;
     padding: 0.5em;
     text-align: center;
-    font-size: 50%;
+    font-size: 60%;
     font-style: italic;
 }
 
@@ -400,6 +399,10 @@ body {
         height: 20px;
         font-size: 50%;
     }
+     
+     #debugMsg {
+        font-size:50%;
+     }
 
      /* Game */
 
