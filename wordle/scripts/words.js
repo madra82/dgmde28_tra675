@@ -207,6 +207,7 @@ function Row(n)
 
                 maybeKey = document.getElementById(guess[i]);
                 maybeKey.classList.add("maybe");
+		maybeKey.classList.remove("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the wrong place<br>"
             }
