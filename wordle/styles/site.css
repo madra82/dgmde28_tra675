@@ -293,6 +293,7 @@ body {
     padding-bottom: 0.2em;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    margin-top: 5em;
  }
 
  #close {
@@ -493,6 +494,11 @@ body {
      #onScreenKB {
         margin-top: 0.5em;
      }
+     
+     /* PlayAgain */
+
+     #playAgain {
+         margin-top: 0.5em;
  }
 
  @media (min-width: 1190px) {
