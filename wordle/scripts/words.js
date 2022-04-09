@@ -306,7 +306,8 @@ function Row(n)
             var wins = winArr.length;
             var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
-    
+		
+    	    var timePlural = " times"
             var winPlural = " wins"
             var lossPlural = " losses"
 
@@ -320,7 +321,13 @@ function Row(n)
                 winPlural = " win"
             }
     
-            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+winPlural+" and "+losses+lossPlural+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
+            if (games == 1)
+            {
+                timePlural = " time"
+            }
+    
+    
+            var statMsg = "<br>You have played "+games+timePlural+".  You have had "+wins+winPlural+" and "+losses+lossPlural+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
