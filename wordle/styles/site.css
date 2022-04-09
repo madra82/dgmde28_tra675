@@ -329,8 +329,7 @@ body {
 .keys {
     margin: 0.3em;
     height: 60px;
-    padding-left: 0.2em;
-    padding-right: 0.2em
+    text-align: center;
     padding-top: 0.1em;
     vertical-align: middle;
     min-width: 60px;
