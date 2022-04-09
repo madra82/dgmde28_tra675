@@ -3,7 +3,7 @@ h1 {
     font-size: 500%;
     color: rgb(192,0,0);
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     margin-top: 0;
 }
 
@@ -403,7 +403,6 @@ body {
      
      h1{
         font-size:300%;
-        margin-bottom: 0;
      }
 
      /* Debug */
