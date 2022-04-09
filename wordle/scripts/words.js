@@ -636,8 +636,6 @@ function trackKeys(k)
 
     var ok = key.match(regex);
 
-    console.log(key);
-
     if (key == "Enter")
     {
         turnOffTracking();
