@@ -307,7 +307,20 @@ function Row(n)
             var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
     
-            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" losses for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
+            var winPlural = " wins"
+            var lossPlural = " losses"
+
+            if (losses == 1)
+            {
+                lossPlural = " loss"
+            }
+
+            if (wins == 1)
+            {
+                winPlural = " win"
+            }
+    
+            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+winPlural+" and "+losses+lossPlural+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
@@ -342,8 +355,13 @@ function Row(n)
                 {count = total[i]}
                 else
                 {count = 0}
+                gamePlural = " games"
                 guesses = parseInt(i)+1
-                msg.innerHTML += "<li>"+guesses+" - "+count+" game(s)</li>"
+                if (count == 1)
+                {
+                    gamePlural = " game"
+                }
+                msg.innerHTML += "<li>"+guesses+" - "+count+gamePlural+"</li>"
             }
         }
     }
