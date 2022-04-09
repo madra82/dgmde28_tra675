@@ -328,11 +328,12 @@ body {
 
 .keys {
     margin: 0.3em;
-    height: 60px;
-    min-width: 60px;
+    height: 55px;
+    min-width: 55px;
     text-align: center;
     vertical-align: middle;
-    padding-top: 0.1em;
+    box-sizing: border-box;
+    padding: 0.1em;
     font-size: 150%;
     color: white;
     background-color: black;
