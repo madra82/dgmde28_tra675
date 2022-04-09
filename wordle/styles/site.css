@@ -329,10 +329,10 @@ body {
 .keys {
     margin: 0.3em;
     height: 60px;
-    text-align: center;
-    padding-top: 0.1em;
-    vertical-align: middle;
     min-width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.1em;
     font-size: 150%;
     color: white;
     background-color: black;
