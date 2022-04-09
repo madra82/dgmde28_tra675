@@ -53,6 +53,7 @@ function Row(n)
     this.addCells = addCells;
     this.element = rowElement;
     this.getGuess = getGuess;
+    this.notInWord = notInWord;
     this.addLetter = addLetter;
     this.deleteLetter = deleteLetter;
     this.checkLetters = checkLetters;
@@ -144,6 +145,22 @@ function Row(n)
     }
 
 
+    function notInWord()
+    {
+        var msg = document.getElementById("errMsg");
+        msg.innerHTML = "The dictionary cannot find your word. Please try again."; 
+        
+        for (i in this.cells)
+        {
+            box = document.getElementById(this.cells[i].id);
+            box.textContent = "";
+        }
+
+        letter=0;
+        
+        turnOnTracking();
+    }
+    
     function checkGuess()
     {
         var guessStr = this.getGuess().toUpperCase();
@@ -290,7 +307,7 @@ function Row(n)
             var losses = lossArr.length;
             var games = winArr.length+lossArr.length;
     
-            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
+            var statMsg = "<br>You have played "+games+" times.  You have had "+wins+" wins and "+losses+" losses for a win rate of "+percentWin+"%.<ul>Number of Guesses:</ul>"
 
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
@@ -732,13 +749,11 @@ function checkWord()
         {console.log(response); 
             if ('word' in response) 
             {
-                gameBox.currentRow().checkGuess()
+                gameBox.currentRow().checkGuess();
             } 
             else if ('success' in response) 
             {
-                var msg = document.getElementById("errMsg");
-                msg.innerHTML = "The dictionary cannot find your word. Please try again."; 
-                turnOnTracking();
+                gameBox.currentRow().notInWord();
             }
         }
         )
