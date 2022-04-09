@@ -534,6 +534,7 @@ function addListeners()
     debugNo.addEventListener("click",function()
     {  
         debugMsg.classList.add("hide");
+	answer.classList.add("hide");
     })
 
     answer.addEventListener("click",function()
@@ -712,7 +713,7 @@ function getWord()
         }
     };
 
-    fetch('https://wordsapiv1.p.rapidapi.com/words/?random=true&letters=5&hasDetails=definitions&frequencyMin=4&?letterPattern=^[a-z]*$/', options)
+    fetch('https://wordsapiv1.p.rapidapi.com/words/?random=true&?hasDetails=definitions&letters=5&frequencyMin=4&?letterPattern=^[a-z]*$/', options)
     .then(response => response.json())
     .then(response => {document.getElementById("answer").innerHTML = response.word})
     .catch(err => console.error(err));
