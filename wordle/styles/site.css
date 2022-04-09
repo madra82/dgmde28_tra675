@@ -3,7 +3,7 @@ h1 {
     font-size: 500%;
     color: rgb(192,0,0);
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     margin-top: 0;
 }
 
@@ -90,7 +90,7 @@ body {
 /* Game Grid & Cells */
 
 #gridContainer {
-    margin-top: 2em;
+    margin-top: 1em;
     vertical-align: top;
 }
 
@@ -188,6 +188,7 @@ body {
 #debug {
     height: 50px;
     font-size: 80%;
+    margin-top:0.5em;
 }
 
 #debugBtnWrapper {
@@ -235,8 +236,8 @@ body {
 #errMsg {
     text-align: center;
     vertical-align: top;
-    min-height: 25px;
-    font-size: 100%;
+    min-height: 40px;
+    font-size: 120%;
 }
 
 #msgContainer{
@@ -410,7 +411,6 @@ body {
      #debug {
         height: 20px;
         font-size: 50%;
-        margin: 0.5em;
         vertical-align: top;
     }
 
@@ -512,7 +512,8 @@ body {
      /*ErrMsg */
      
      #errMsg {
-    font-size: 70%;
+        font-size: 70%;
+        min-height: 25px;
     }
 }
 
