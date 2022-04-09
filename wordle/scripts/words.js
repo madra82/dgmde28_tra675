@@ -297,7 +297,6 @@ function Row(n)
             var msgBox = document.getElementById("msgBox");
             var msg = document.getElementById("msgText");
             var closeBtn = document.getElementById("close");
-            var playAgain = document.getElementById("playAgain")
 
             var percentWin = ((winArr.length/(winArr.length+lossArr.length))*100.0).toFixed(2);
 	    var wins = winArr.length;
@@ -309,7 +308,6 @@ function Row(n)
             msgBox.classList.remove("hide");
             msg.innerHTML = "";
             closeBtn.focus();
-            playAgain.classList.remove("hide");
 
             //Animate
 
@@ -569,7 +567,6 @@ function addListeners()
         letter = 0;
         clearBoard();
         getWord();
-        play.classList.add("hide");
     })
 
     function clearBoard(){
