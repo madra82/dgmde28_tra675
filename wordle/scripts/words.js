@@ -199,7 +199,11 @@ function Row(n)
             else if (!char.includes(guess[i]) && guess[i] != 0)
             {
                 this.cells[i].notIncluded();
+                
+		if (ans.includes(guess[i])==false)
+                {
                 elimLetters.add(guess[i]);
+                };
 
                 badKey = document.getElementById(guess[i]);
                 badKey.classList.add("blackout");
