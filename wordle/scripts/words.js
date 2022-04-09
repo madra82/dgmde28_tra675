@@ -209,10 +209,6 @@ function Row(n)
             else if (guess[i] != 0 && guessCount > ansCount) 
             {
                 this.cells[i].notIncluded();
-                elimLetters.add(guess[i]);
-
-                badKey2 = document.getElementById(guess[i]);
-                badKey2.classList.add("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is not in the word<br>"
 
@@ -224,7 +220,6 @@ function Row(n)
 
                 maybeKey = document.getElementById(guess[i]);
                 maybeKey.classList.add("maybe");
-		maybeKey.classList.remove("blackout");
 
                 explain.innerHTML += "the <span class='letters'> "+(guess[i])+"</span> is in the wrong place<br>"
             }
