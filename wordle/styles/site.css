@@ -110,6 +110,7 @@ body {
 }
 
 .cells {
+    background-color: rgb(240,240,240);
     border: thin solid;
     display: inline-block;
     box-sizing: border-box;
